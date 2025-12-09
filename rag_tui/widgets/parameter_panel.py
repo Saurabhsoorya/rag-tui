@@ -14,7 +14,7 @@ class ParameterControl(Container):
         height: auto;
         width: 100%;
         padding: 0 1;
-        margin: 1 0;
+        margin: 0;
     }
     
     ParameterControl .param-row {
@@ -144,8 +144,8 @@ class ParameterPanel(Container):
         width: 100%;
         background: $surface-darken-1;
         border: solid $primary;
-        padding: 1;
-        margin: 1 0;
+        padding: 0 1;
+        margin: 0;
     }
     
     ParameterPanel .panel-title {
