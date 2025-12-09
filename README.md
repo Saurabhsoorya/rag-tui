@@ -27,6 +27,16 @@ You know that feeling when your LLM hallucinates because your retrieval returned
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+### 📸 Screenshots
+
+| Input Tab | Chunks Tab |
+|-----------|------------|
+| ![Input](assets/input-tab.png) | ![Chunks](assets/chunks-tab.png) |
+
+| Search Tab | Chat Tab |
+|------------|----------|
+| ![Search](assets/search-tab.png) | ![Chat](assets/chat-tab.png) |
+
 ---
 
 ## 🤔 Why Should I Care?
