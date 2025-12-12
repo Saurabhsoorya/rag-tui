@@ -5,6 +5,20 @@ All notable changes to RAG-TUI will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.3-beta] - 2025-12-12
+
+### Added
+- **Overlap Visualization**: Shared text between adjacent chunks is now highlighted in gold/yellow
+- **Copy to Clipboard**: Each chunk card has a 📋 copy button to copy chunk text
+- **Strategy Keyboard Shortcuts**: Press 1-5 to quickly switch chunking strategies
+  - `1` = Token-based, `2` = Sentence, `3` = Paragraph, `4` = Recursive, `5` = Fixed
+
+### Changed
+- Chunk cards now show overlap indicator (🔗) and overlap character count
+- Help overlay updated with new keyboard shortcuts and feature documentation
+
+---
+
 ## [0.0.2-beta] - 2025-12-10
 
 ### Fixed

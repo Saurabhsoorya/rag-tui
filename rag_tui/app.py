@@ -1,4 +1,4 @@
-"""RAG-TUI v0.0.2-beta: Interactive Chunking Debugger.
+"""RAG-TUI v0.0.3-beta: Interactive Chunking Debugger.
 
 A beautiful terminal UI for visualizing, debugging, and tuning RAG pipelines.
 Features: Multiple chunking strategies, multi-provider LLM, batch testing, export.
@@ -55,7 +55,7 @@ class RAGTUIApp(App):
     
     CSS_PATH = Path(__file__).parent / "styles" / "app.tcss"
     
-    TITLE = "RAG-TUI v0.0.2 Beta"
+    TITLE = "RAG-TUI v0.0.3 Beta"
     SUB_TITLE = "Interactive Chunking Debugger"
     
     BINDINGS = [
@@ -66,6 +66,12 @@ class RAGTUIApp(App):
         Binding("e", "export_config", "Export Config"),
         Binding("f1", "show_help", "Help"),
         Binding("question_mark", "show_help", "Help", show=False),
+        # Strategy shortcuts (1-5 keys)
+        Binding("1", "strategy_token", "Token", show=False),
+        Binding("2", "strategy_sentence", "Sentence", show=False),
+        Binding("3", "strategy_paragraph", "Paragraph", show=False),
+        Binding("4", "strategy_recursive", "Recursive", show=False),
+        Binding("5", "strategy_fixed", "Fixed", show=False),
     ]
     
     def __init__(self):
@@ -842,6 +848,41 @@ Avg Retrieval Score: {batch_result.avg_retrieval_score:.3f}
             await self._load_file(path)
         else:
             self.notify("⚠️ Please enter a file path", severity="warning")
+
+    def _switch_strategy(self, strategy: StrategyType, name: str) -> None:
+        """Switch to a strategy and update UI."""
+        self._current_strategy = strategy
+        self.chunking_engine.set_strategy(strategy)
+        
+        # Update the dropdown selector
+        try:
+            selector = self.query_one("#strategy-select", Select)
+            selector.value = strategy.value
+        except Exception:
+            pass
+        
+        asyncio.create_task(self._rechunk())
+        self.notify(f"⚡ Strategy: {name}", timeout=1)
+
+    def action_strategy_token(self) -> None:
+        """Switch to token-based chunking."""
+        self._switch_strategy(StrategyType.TOKEN, "Token-based")
+
+    def action_strategy_sentence(self) -> None:
+        """Switch to sentence chunking."""
+        self._switch_strategy(StrategyType.SENTENCE, "Sentence")
+
+    def action_strategy_paragraph(self) -> None:
+        """Switch to paragraph chunking."""
+        self._switch_strategy(StrategyType.PARAGRAPH, "Paragraph")
+
+    def action_strategy_recursive(self) -> None:
+        """Switch to recursive chunking."""
+        self._switch_strategy(StrategyType.RECURSIVE, "Recursive")
+
+    def action_strategy_fixed(self) -> None:
+        """Switch to fixed character chunking."""
+        self._switch_strategy(StrategyType.FIXED_CHARS, "Fixed chars")
 
 
 

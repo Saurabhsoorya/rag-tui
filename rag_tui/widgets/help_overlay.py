@@ -8,7 +8,7 @@ from textual.binding import Binding
 
 
 HELP_MARKDOWN = """
-# 🚀 RAG-TUI v0.0.2 Beta
+# 🚀 RAG-TUI v0.0.3 Beta
 
 ## ⌨️ Keyboard Shortcuts
 * **Q**        : Quit application
@@ -19,6 +19,7 @@ HELP_MARKDOWN = """
 * **F1 / ?**   : Show this help
 * **Tab**      : Switch tabs
 * **Esc**      : Close modal / Cancel
+* **1-5**      : Quick strategy switch (Token/Sentence/Paragraph/Recursive/Fixed)
 
 ## 📝 Tabs Guide
 1. **Input**: Paste text or load files (.txt, .md, .py, .pdf).
@@ -30,20 +31,22 @@ HELP_MARKDOWN = """
 
 
 ## 🧩 Chunking Strategies
-* **Token** (Chonkie): Best for general text.
-* **Sentence**: Keeps sentences intact.
-* **Paragraph**: Good for structured docs.
-* **Recursive**: Adaptive (good for code/mixed).
-* **Fixed**: Simple char count (fast).
+* **Token** (Chonkie): Best for general text. (Press **1**)
+* **Sentence**: Keeps sentences intact. (Press **2**)
+* **Paragraph**: Good for structured docs. (Press **3**)
+* **Recursive**: Adaptive (good for code/mixed). (Press **4**)
+* **Fixed**: Simple char count (fast). (Press **5**)
 * **Custom**: Define your own Python function.
 
 ## 🚦 Quality Indicators (Chunks Tab)
 * 🟢 Complete sentence (ends with . ! ?)
 * 🟡 Mid-phrase (ends with , : ;)
 * 🔴 Cut off (ends with other char)
+* 🔗 Overlap with next chunk (highlighted in gold)
 * ⚠️SHORT Token count < 50
 * ⚠️LONG Token count > 600
 * ↪️CUT Starts mid-sentence (lowercase)
+* 📋 **Copy button**: Click to copy chunk text
 
 ## ✏️ Custom Chunking Guide
 
@@ -174,8 +177,9 @@ class HelpOverlay(ModalScreen):
     """
     
     def compose(self) -> ComposeResult:
+        from textual.containers import VerticalScroll
         with Vertical(id="help-container"):
-            with Vertical(id="help-content"):
+            with VerticalScroll(id="help-content"):
                 yield Markdown(HELP_MARKDOWN)
             yield Button("Close (Esc)", variant="primary", id="close-btn")
     
